@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:Player width="404" height="470"
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:local="*"
+	layout="absolute"
+	backgroundColor="#FFFFFF"
+	backgroundAlpha="0">
+	<mx:UIComponent id="videoContainer" x="2"/>
+	<mx:Text id="prompt" x="0" y="224" width="404"  height="70"/>
+	<mx:Canvas y="302" x="6">
+		<mx:Form  x="11" y="-12">
+			<mx:FormItem label="Server:" labelStyleName="bold">
+				<mx:TextInput id="connectStr" width="263" paddingLeft="0" text="rtmp://67.159.5.36/live"/>
+			</mx:FormItem>
+			<mx:FormItem label="Stream:" labelStyleName="bold" direction="horizontal">
+				<mx:TextInput id="streamStr" width="205" text="live"/>
+				<mx:Button label="Play" id="connectButton"/>
+			</mx:FormItem>
+		</mx:Form>
+		<mx:Image id="logo" source="assets/logo.png" x="94" y="76"/>
+		<mx:Button id="doFullscreen"  visible="{isConnected}" icon="@Embed(source='assets/fullscreen.png')" width="30" x="360" y="2"/>
+		<mx:HSlider id="volumeLevel" value=".5" maximum="1"
+				enabled="{isConnected}"
+				labels="volume"
+				labelOffset="2"  x="157" y="62"/>
+		<mx:Text id="playerVersion" x="165.5" y="134" width="223.5"/>
+		<mx:Text id="fpsText" x="1" y="108" width="167.5"/>
+	</mx:Canvas>
+	<mx:Style>
+	.alert {color:"0xFF00FF"}
+	.bold {font-weight:bold;padding-right:0}
+	</mx:Style>
+</local:Player>

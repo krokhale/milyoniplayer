@@ -1,0 +1,16 @@
+body { background: #ffffff; font-family: Verdana; font-size: 12px; text-align: left; }
+td { font-family: Verdana; font-size: 12px; text-align: left; }
+h1 { font-size: 15px; }
+h2 { font-size: 14px; }
+h3 { font-size: 12px; text-decoration: underline; margin-top: 30px; }
+a { color: blue; }
+a:hover { color: black; }
+table { border: 1px solid #ddd; }
+td { border: 1px solid #eee; }
+td { background: #eee; padding: 3px; }
+table.tablepre { border: 1px solid #ddd; background: #eee; margin: 5px; font-family: monospace;}
+td.tablepre { font-family: monospace;}
+li { padding: 1px; }
+ul.ulmenu { list-style-type: none; margin-left: 15px; }
+div.body1 { margin-left: 15px; }
+ul.seealso { margin-top: 4px; }

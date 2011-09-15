@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <player> node -->
+<player 
+	width="650" height="400" 
+	scaleMode="letterbox" isLive="false" autoPlay="true" updateInterval="250"
+	hasCaptions="false">
+	<!-- <mediaElement> node -->
+	<mediaElement>
+		<mediaElement>
+			<media url="rtmp://ec2-107-20-57-38.compute-1.amazonaws.com/vod/FUNIMATION" />
+		</mediaElement>
+	</mediaElement>
+	
+	
+	<!-- <skin> node -->
+	<skin path="assets/skins/RE_Skin.swf">
+		<skinElement id="controlBar"
+			elementClass="com.realeyes.osmfplayer.controls.ControlBar" 
+			initMethod="initControlBarInstance" 
+			scaleMode="none" 
+			hAdjust="0" vAdjust="-30" 
+			hAlign="center"
+			vAlign="bottom"
+			autoPosition="true"
+			draggable="false" 
+			autoHide="true" />
+		<skinElement id="loadingIndicator"
+			elementClass="com.realeyes.osmfplayer.controls.LoadingIndicator" 
+			initMethod="initLoadingIndicatorInstance" 
+			hAdjust="0" vAdjust="0"
+			vAlign="center"
+			autoPosition="true" />
+	</skin>
+</player>

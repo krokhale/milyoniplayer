@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<!-- 
+	This is Flowplayer standalone demo. The fastest way to get started. 
+	You can freely copy things on your site. All demos can be found from: 
+	
+	http://flowplayer.org/demos/
+	
+	Enjoy!
+--> 
+ 
+<head> 
+ 
+ 
+ 
+ 
+ 
+<!-- flowplayer scripts should be loaded from your servers NOT from static.flowplayer.org  --> 
+ 
+<script type="text/javascript" src="http://static.flowplayer.org/js/flowplayer-3.2.6.min.js"></script> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!-- some styling for the standalone page. this line can (or must) be removed --> 
+<link rel="stylesheet" type="text/css" href="/demos/standalone.css"/> 
+ 
+ 
+</head> 
+ 
+ 
+<body> 
+ 
+ 
+ 
+ 
+<!-- player container--> 
+<a
+	href="FunimationDotCom_Beta_Intro_WDS_242.flv"
+	style="display:block;width:425px;height:300px;"
+	id="wowza"> 
+ 
+	<!-- splash image inside the container --> 
+	<img src="http://video.ifanstores.net/milyoni-player/images/milyoni-logo.png" align="center" alt="milyoni" /> 
+ 
+</a> 
+ 
+<!-- Flowplayer installation and configuration --> 
+<script language="JavaScript"> 
+ 
+flowplayer("wowza", "http://video.ifanstores.net/milyoni-player/FBplayer/FBPlayer.swf", {		
+			
+ 
+	clip: {
+		// use RTMP streaming
+		provider: 'rtmp',
+ 
+		// with a secured connection
+		connectionProvider: 'secure'
+	},
+ 
+	plugins: {
+ 
+		// setup the RTMP streaming plugin
+		rtmp: {
+			url: 'FBPlayer.swf',
+ 
+			// The net connection URL with HDDN looks like this
+	
+	netConnectionUrl:'rtmp://fms.0D9C.edgecastcdn.net/000/0y1m/FunimationDotCom_Beta_Intro_WDS_242sec_3023?6d47cfd036a42c48f571d11b6de6d8fe10b44a0d5a131535d02d95459acf9b14d7c2ace8926f13d715558729c590304e521cb'
+//	netConnectionUrl:'rtmp://fms.0D9C.edgecastcdn.net/000D9C/in0y1m/FunimationDotCom_Beta_Intro_WDS_242sec_3023?6d47cfd036a42c48f571d11b6de6d8fe10b44a0d5a131535d02d95459acf9b14d7c2ace8926f13d715558729c590304e521cb6f261d4'
+
+		},
+ 
+		// setup the secure streaming plugin
+		secure: { 
+			url: 'FBPlayer.swf',
+			
+			// the token value (shared secret). 
+			// Needs to be escaped because our token has a percent sign in it.
+			token: escape('#ed%h0#w@1')
+		}
+	}
+});
+</script> 
+ 
+</body> 
+ 
+</html> 

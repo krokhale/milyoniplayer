@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> 
+	<head> 
+		<title>SWFObject 2 dynamic embed</title> 
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+		<script type="text/javascript" src="swfobject.js"></script> 
+		<script type="text/javascript"> 
+
+// var elementId = "mediaspace";
+  //  if ($("#" + elementId).length == 0) return;
+
+  //  var swfVersionStr = "10.1.0";
+ var swfVersionStr = "9.0.0";
+    var xiSwfUrlStr = "/expressInstall.swf";
+    var flashvars = {};
+    flashvars.poster = window.movie.poster;
+    flashvars.api = "/api/wb_player_authorizations?movie_id="; 
+ // we get to define this API - it's going to hit our app
+    flashvars.src = "rtmp://ec2-107-20-57-38.compute-1.amazonaws.com/vod/FUNIMATION";
+
+    var params = {};
+    params.quality = "high";
+    params.bgcolor = "#FFFFFF";
+   // params.allowscriptaccess = "sameDomain";
+    params.allowfullscreen = "true";
+    params.wmode = "transparent";
+    var attributes = {};
+    attributes.id = "mediaspace";
+    attributes.name = "player";
+    attributes.align = "middle";
+    attributes.width = "100%";
+    attributes.height = "100%";
+
+  //  swfobject.embedSWF("http://video.ifanstores.net/milyoni-player/MilyoniMediaPlayer.swf", elementId, "703", "375", swfVersionStr, xiSwfUrlStr, flashvars, params, attributes);
+
+
+    swfobject.embedSWF("MilyoniMediaPlayer.swf", "myContent", "703", "375", swfVersionStr, xiSwfUrlStr, flashvars, params, attributes);
+
+
+	
+		</script> 
+	</head> 
+	<body> 
+		<div id="myContent"> 
+			<h1>Alternative content</h1> 
+			<p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p> 
+		</div> 
+	</body> 
+</html> 

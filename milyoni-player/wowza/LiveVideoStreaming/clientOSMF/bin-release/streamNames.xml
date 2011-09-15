@@ -1,0 +1,11 @@
+<smil>
+	<head>
+	</head>
+	<body>
+		<switch>
+			<video src="myStream1" system-bitrate="450000" height="320" width="180"/>
+			<video src="myStream2" system-bitrate="750000" height="476" width="268"/>
+			<video src="myStream3" system-bitrate="1100000" height="640" width="360"/>
+		</switch>
+	</body>
+</smil>

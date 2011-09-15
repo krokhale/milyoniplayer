@@ -1,0 +1,45 @@
+<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:SSME="clr-namespace:Microsoft.Web.Media.SmoothStreaming;assembly=Microsoft.Web.Media.SmoothStreaming"
+    mc:Ignorable="d"
+	x:Class="LiveSmoothStreaming.MainPage"
+    Loaded="UserControl_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".60*"/>
+            <RowDefinition Height=".40*"/>
+        </Grid.RowDefinitions>
+       
+        <SSME:SmoothStreamingMediaElement AutoPlay="False" Width="240" Height="200" x:Name="SmoothPlayer"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,12,0,0" Background="White"/>
+        <TextBlock x:Name="OutPut" Grid.Row="0" Width="auto" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,0"/>
+        <Grid x:Name="grid2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,5,0,0" Width="400">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+           
+            <Canvas Width="auto">
+                <TextBlock Text="volume"  Canvas.Left="0" Canvas.Top="0" />
+                <Slider x:Name="VolumeBar" Maximum="10" ValueChanged="VolumeBar_ValueChanged" Width="200" Canvas.Left="46" Canvas.Top="0" />
+                <Image Source="fullscreen.png" x:Name="fullScreenButton" ToolTipService.ToolTip="Full Screen" MouseLeftButtonUp="Fullscreen_Click" Height="24" Width="24" Canvas.Left="253" Visibility="Collapsed" Canvas.Top="0" />
+            </Canvas>
+            <StackPanel Orientation="Vertical" Grid.Row="1" Width="auto">
+                <TextBlock Text="Manifest:" FontWeight="Bold"/>
+                <TextBox x:Name="ManifestURL" KeyDown="ManifestURL_KeyDown" Text="http://localhost:1935/live/myStream/Manifest" HorizontalAlignment="Left" Width="400"/>
+                <Canvas Width="auto" Margin="0,5,0,5">
+                    <TextBlock Text="Limit Bitrate: " Visibility="{Binding Path=Visibility, ElementName=BWCombo,Mode=OneWay}" FontWeight="Bold" Margin="0,5,0,0"/>
+                    <ComboBox x:Name="BWCombo" MinWidth="80" SelectionChanged="BWCombo_SelectionChanged" Visibility="Collapsed" Canvas.Left="85" ToolTipService.ToolTip="Limit Bitrate" Margin="0,4,0,5"/>
+                    <TextBlock Text=" Current Bitrate: "  FontWeight="Bold" MinWidth="110" Canvas.Left="170" Margin="5,5,0,0"/>
+                    <TextBlock x:Name="BitRate" Text="0" FontWeight="Bold" MinWidth="50" Canvas.Left="280" Margin="0,5,0,5"/>
+                    <Button x:Name="PlayButton" Content="Play" Click="PlayButton_Click" Canvas.Left="340" IsEnabled="True"  />                    
+                    <Image Source="logo.png" Canvas.Left="0" Canvas.Top="30" Width="200" />
+                </Canvas>
+            </StackPanel>
+           
+        </Grid>
+    </Grid>
+</UserControl>

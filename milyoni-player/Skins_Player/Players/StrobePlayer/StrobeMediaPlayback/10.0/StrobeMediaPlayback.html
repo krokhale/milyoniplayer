@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>Strobe Media Playback</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  	<script type="text/javascript" src="scripts/swfobject.js"></script>
+    <script type="text/javascript">
+        		
+    		var parameters =
+    			{	id: "1"
+    			,	src: "rtmp://ec2-107-20-57-38.compute-1.amazonaws.com/vod/FUNIMATION"
+    			,	autoPlay: "true"
+    			,   width: "638"
+    			,   height: "400"
+				,	autoHideControlBar: "true"
+				,	controlBarPosition: "bottom"
+    			};
+    		    		
+    		// Embed the player SWF:
+    		
+    		swfobject.embedSWF
+				( "StrobeMediaPlayback.swf"
+				, "player"
+				, parameters["width"], parameters["height"]
+				, "10.0.0"
+				, {}
+				, parameters
+				, { allowFullScreen: "true" }
+				, { name: "StrobeMediaPlayback" }
+				);
+			
+     </script>
+  	<style type="text/css">
+	<!--
+	.Verdana {
+		font-family: Verdana, Geneva, sans-serif;
+	}
+	-->
+	</style>
+ 	</head>
+	<body>
+	<table width="100%" border="0" cellspacing="5">
+ <!-- <tr>
+    <td width="43"><img src="images/adobe-lq.png" alt="" width="43" height="72" /></td>
+    <td width="320" class="Verdana">Strobe Media Playback</td>
+    <td width="262"><img src="images/osmf_horizontal_red.png" width="262" height="57"/></td>
+    <td width="*"></td>
+  </tr>-->
+</table>
+<table width="100%" border="0" cellspacing="5">
+  <tr>
+    <td>
+     <div id="player">
+      <p>Please install Flash Player 10.0</p>
+    </div>
+    </td>
+  </tr>
+</table>
+  </body>
+</html>

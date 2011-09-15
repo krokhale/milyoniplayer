@@ -1,0 +1,13 @@
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\Bin\Debug\LiveSilverlightStreaming.dll
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\Bin\Debug\LiveSilverlightStreaming.pdb
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\Bin\Debug\AppManifest.xaml
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\Bin\Debug\LiveSilverlightStreaming.xap
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\Bin\Debug\TestPage.html
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\Bin\Debug\Microsoft.Web.Media.SmoothStreaming.DLL
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\obj\Debug\App.g.i.cs
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\obj\Debug\MainPage.g.i.cs
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\obj\Debug\LiveSilverlightStreaming.g.resources
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\obj\Debug\LiveSilverlightStreaming.dll
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\obj\Debug\LiveSilverlightStreaming.pdb
+C:\inetpub\wwwroot\LiveSilverlightStreaming\LiveSilverlightStreaming\obj\Debug\XapCacheFile.xml
