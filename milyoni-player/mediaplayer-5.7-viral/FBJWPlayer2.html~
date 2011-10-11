@@ -16,7 +16,7 @@ http://www.longtailvideo.com/players/jw-flv-player/
  
 <body> 
  
-
+<div id="container">Loading the player...</div>
 <script type="text/javascript"> jwplayer("container").setup({
 });
 

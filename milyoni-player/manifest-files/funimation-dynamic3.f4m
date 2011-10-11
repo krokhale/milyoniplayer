@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://ns.adobe.com/f4m/1.0">
+	<id>Dynamic Streaming</id>
+	<duration>600</duration>
+	<mimeType>video/mp4</mimeType>
+	<baseURL>rtmp://fms.0D9C.edgecastcdn.net/000D9C/in0y1m/</baseURL>
+
+	<media url="mp4:asdfkjasui8e746fhfh5545JKKGFKIU4ETJN-750K.mp4?6d47cfd036a42c48f571d11d6de6d8fea5a485a3f01f9102c722159038a46c4dee59"  bitrate="750" width="768" height="428" />
+	<media url="mp4:asdfkjasui8e746fhfh5545JKKGFKIU4ETJN-1000K.mp4?6d47cfd036a42c48f571d11d6de6d8fea5a485a3f01f9102c722159038a46c4dee59"  bitrate="1000" width="768" height="428" />
+	<media url="mp4:asdfkjasui8e746fhfh5545JKKGFKIU4ETJN-1500K.mp4?6d47cfd036a42c48f571d11d6de6d8fea5a485a3f01f9102c722159038a46c4dee59"  bitrate="1500" width="1024" height="522" />
+	<media url="mp4:asdfkjasui8e746fhfh5545JKKGFKIU4ETJN-2000K.mp4?6d47cfd036a42c48f571d11d6de6d8fea5a485a3f01f9102c722159038a46c4dee59"  bitrate="2000" width="1024" height="522"/>
+
+</manifest>
+

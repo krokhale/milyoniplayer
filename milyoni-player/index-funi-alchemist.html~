@@ -13,7 +13,34 @@ var flashvars = {};
 //flashvars.src = "rtmp://fms.0D9C.edgecastcdn.net/000D9C/in0y1m/FunimationDotCom_Beta_Intro_WDS_242sec_3023?6d47cfd036a42c48f571d11b6de6d8fe10b44a0d5a131535d02d95459acf9b14d7c2ace8926f13d715558729c590304e521cb6f261d4";
 
 //$params = "ec_expire=135695520" //time till dec 31 2012
-flashvars.src = "rtmp://fms.0D9C.edgecastcdn.net/000D9C/in0y1m/FunimationDotCom_Beta_Intro_WDS_242sec_3023?6d47cfd036a42c48f571d11d6de6d8fea5a485a3f01f9102c722159038a46c4dee59";
+//flashvars.src = "rtmp://fms.0D9C.edgecastcdn.net/000D9C/in0y1m/FunimationDotCom_Beta_Intro_WDS_242sec_3023?6d47cfd036a42c48f571d11d6de6d8fea5a485a3f01f9102c722159038a46c4dee59";
+
+//flashvars.manifest = "funimation-flv1.f4m";
+
+//flashvars.src = "./funimation-flv.f4m";
+//flashvars.src = "funimation.f4m";
+
+//finally working from mediapm
+//flashvars.src = "http://mediapm.edgesuite.net/osmf/content/test/manifest-files/dynamic_Streaming.f4m";
+
+//flashvars.src = "http://video.ifanstores.net/milyoni-player/manifest-files/funimation-dynamic1.f4m";
+
+//flashvars.src = "http://video.ifanstores.net/milyoni-player/manifest-files/funimation-dynamic.f4m";
+
+
+//flashvars.src = "http://video.ifanstores.net/milyoni-player/manifest-files/funimation-dynamic2.f4m";
+
+//final final working
+//flashvars.src = "http://video.ifanstores.net/milyoni-player/manifest-files/funimation-dynamic.f4m";
+
+flashvars.src = "./manifest-files/funimation-dynamic.f4m";
+
+flashvars.poster = "http://www.milyoni.com/images/logo.png";
+
+//working from videos.ifanstores.net
+//flashvars.src = "http://video.ifanstores.net/milyoni-player/manifest-files/funimation.f4m";
+
+//flashvars.src = "http://localhost:10088/fromgithub/milyoniplayer/milyoni-player/manifest-files/funimation.f4m";
 
 flashvars.urlIncludesFMSApplicationInstance  =  "true"; 
 
@@ -24,7 +51,7 @@ var attributes = {};
 
   params.quality = "high";
     params.bgcolor = "#FFFFFF";
-   // params.allowscriptaccess = "sameDomain";
+    params.allowscriptaccess = "always";
     params.allowfullscreen = "true";
     params.wmode = "transparent";
 

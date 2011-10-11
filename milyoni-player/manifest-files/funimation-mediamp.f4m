@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://ns.adobe.com/f4m/1.0">
+	<id>Dynamic Streaming</id>
+	<duration>253</duration>
+	<mimeType>video/mp4</mimeType>
+	<baseURL>rtmp://cp67126.edgefcs.net/ondemand</baseURL>
+	<media url="mp4:mediapm/ovp/content/demo/video/elephants_dream/elephants_dream_768x428_24.0fps_408kbps"  bitrate="408" width="768" height="428" />
+	<media url="mp4:mediapm/ovp/content/demo/video/elephants_dream/elephants_dream_768x428_24.0fps_608kbps"  bitrate="608" width="768" height="428" />
+	<media url="mp4:mediapm/ovp/content/demo/video/elephants_dream/elephants_dream_1024x522_24.0fps_908kbps"  bitrate="908" width="1024" height="522" />
+	<media url="mp4:mediapm/ovp/content/demo/video/elephants_dream/elephants_dream_1024x522_24.0fps_1308kbps"  bitrate="1308" width="1024" height="522"/>
+	<media url="mp4:mediapm/ovp/content/demo/video/elephants_dream/elephants_dream_1280x720_24.0fps_1708kbps" bitrate="1708" width="1280" height="720" />
+</manifest>
+

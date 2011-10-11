@@ -1,0 +1,9 @@
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://ns.adobe.com/f4m/1.0">
+	<id>myvideo</id>
+	<duration></duration>
+	<media url="rtmp://fms.0D9C.edgecastcdn.net/000D9C/in0y1m/FunimationDotCom_Beta_Intro_WDS_242sec_3023?6d47cfd036a42c48f571d11b6de6d8fe10b44a0d5a131535d02d95459acf9b14d7c2ace8926f13d715558729c590304e521cb6f261d4"/>
+</manifest>

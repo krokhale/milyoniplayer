@@ -1,5 +1,5 @@
 <config>
-	<src>http://mysite.com/my.flv</src>	
+	<src>rtmp://ec2-107-20-57-38.compute-1.amazonaws.com/vod/FUNIMATION</src>	
 	<metadata> 
 		<param name="account" value="one"/>
 		<param name="trackingServer" value="one.net"/>
