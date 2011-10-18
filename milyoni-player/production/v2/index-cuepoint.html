@@ -1,0 +1,200 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Strobe Media Playback</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<script type="text/javascript">  		
+    		var gtime;
+			var cTime;			
+		    var sec;
+			var seektime;
+	
+    	// Create a StrobeMediaPlayback configuration 
+		var flashvars =
+			{	src: "rtmp://ec2-107-20-57-38.compute-1.amazonaws.com/vod/FUNIMATION"     			
+   			,	autoPlay: true
+			,	controlBarAutoHide: false
+	                ,   javascriptCallbackFunction: "onJavaScriptBridgeCreated"
+			};
+    		
+		// Embed the player SWF:    		
+		swfobject.embedSWF
+			( "MilyoniPlayer-v2.swf"
+			, "strobeMediaPlayback"
+			, 640
+			, 480
+			, "10.1.0"
+			, {}
+			, flashvars
+			, { allowFullScreen: "true"
+	                   ,  allowscriptaccess: "always" }
+			, { name: "strobeMediaPlayback" }
+			);
+			
+		function onCurrentTimeChange(time, playerId)
+		{		
+		cTime=time;
+		document.getElementById("currentTime").innerHTML = time;
+		rectime(cTime);
+		initCall();
+		}
+		
+		function ongettime()
+		{
+			var gmin =Math.floor(cTime / 60)
+			
+			rectime(cTime)
+			timetext.value=gtime;
+			alert(gtime);
+		}
+		function rectime(cTime) {
+		
+			var hr = Math.floor(cTime / 3600);
+			var min = Math.floor((cTime - (hr * 3600))/60);
+			cTime -= ((hr * 3600) + (min * 60));
+			cTime += ''; min += '';
+			while (min.length < 2) {min = '0' + min;}
+			while (cTime.length < 2) {cTime = '0' + cTime;}
+			hr = (hr)?':'+hr:'';
+			
+			if(cTime<10)
+			{			
+			sec="0"+Math.floor(cTime,0);
+			
+			}else
+			{
+			sec=Math.floor(cTime);
+			}
+			gtime=min + ':' +sec
+			
+		}
+		
+		function onDurationChange(time, playerId)
+		{
+		
+			document.getElementById("duration").innerHTML = time;	
+		}		
+		var player = null;
+		function onJavaScriptBridgeCreated(playerId)
+		{
+			if (player == null) {
+				player = document.getElementById(playerId);
+				
+				// Add event listeners that will update the 
+				player.addEventListener("currentTimeChange", "onCurrentTimeChange");
+				player.addEventListener("durationChange", "onDurationChange");
+				
+				// Pause/Resume the playback when we click the Play/Pause link
+				document.getElementById("play-pause").onclick = function(){
+					var state = player.getState();
+					if (state == "ready" || state == "paused") {
+						player.play2();
+					}
+					else 
+						if (state == "playing") {
+							player.pause();
+						}
+					return false;
+				};
+			}
+		}
+		function initCall(){
+	
+ 	//alert();
+    var lang = document.getElementById("htmldropdown"); 
+	for (var i=0; i<lang.options.length; i++){
+ 
+        if(gtime == lang.options[i].value)
+        {
+         displayTime(lang.options[i].value)
+		//alert(gtime);
+             
+         }
+  			}
+	
+		} 
+		 function displayTime(gtime)
+   	  {
+    	
+        // Create an Option object        
+        var opt = document.createElement("option");
+		//alert(document.getElementById("timer").options.length);
+		if(document.getElementById("timer").options.length==0){
+		document.getElementById("timer").options.add(opt);
+        opt.text = gtime;
+        opt.value = gtime;
+		}
+		else
+		{
+ 
+ 		// alert(document.getElementById("timer").options[i].value);
+		 var isTher = contains(document.getElementById("timer").options,gtime);
+ 		if(!isTher){
+        document.getElementById("timer").options.add(opt);
+        opt.text = gtime;
+        opt.value = gtime;        
+     }
+  
+		}
+       
+    }
+	 function contains(a, obj) {
+      for (var i = 0; i < a.length; i++) { 
+         if (a[i].value == obj) {    
+             return true;    
+              }     
+           }    
+          return false;
+    	} 
+		
+	function sendToJavaScript(gtime)
+    {
+    	
+        // Create an Option object        
+        var opt = document.createElement("option");
+
+        // Add an Option object to Drop Down/List Box
+        document.getElementById("timer").options.add(opt);
+   	    opt.text = gtime;
+        opt.value = gtime;
+       }
+	
+		
+    </script>  	
+	
+  </head>
+  <body>
+  <div>
+			<span id="currentTime" style="display: none;" /> ... </span>  <span id="duration" style="display: none;" /> ... </span>
+		</div>  
+	
+	<table width="100%" border="0" cellspacing="5">
+  <tr>
+    <td width=660>
+	<div id="strobeMediaPlayback">	
+			<h1>Alternative content</h1> 
+			<p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p> 
+		</div> 
+		</td>
+		
+<td align="left" valign="top">
+	<p style="margin-left:20px">
+	<FORM NAME="myform" background-color:#000000>
+	<select MULTIPLE id="timer" size=7 style='width:300px'>
+	</select>
+	<select id="htmldropdown" style='width:100px' size="7"  multiple="multiple">
+	<option value="00:02">00:02</option>
+	<option value="00:05">00:05</option>
+	<option value="00:09">00:09</option>
+	<option value="00:17">00:17</option>
+	<option value="00:29">00:29</option>
+	<option value="00:40">00:40</option>
+	<option value="00:55">00:55</option>	
+	</FORM>
+	</p>
+	</td>
+  </tr>
+
+	</body> 
+</html> 
